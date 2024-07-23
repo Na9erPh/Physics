@@ -1,82 +1,169 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>صفحة خاصة بالطلاب المحترمين</title>
+    <title>مقرر فيزياء 3-1</title>
     <style>
-        @font-face {
-            font-family: 'KFGQPCKSARegular-Regular';
-            src: url('KFGQPCKSARegular-Regular.ttf') format('truetype');
-        }
-        body {
-            font-family: 'KFGQPCKSARegular-Regular', sans-serif;
-            background-color: #f9f9f9;
-            direction: rtl;
-            text-align: center;
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
+
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
-        .header {
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background-color: #003366;
+            color: #fff;
+            padding: 1rem 0;
+        }
+
+        header h1 {
+            font-size: 1.5rem;
+        }
+
+        nav {
+            background-color: #004080;
+            padding: 0.5rem 0;
+        }
+
+        nav ul {
+            list-style-type: none;
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: #004d99;
-            color: white;
-            padding: 10px 20px;
+            justify-content: center;
         }
-        .header img {
-            width: 50px;
+
+        nav ul li {
+            margin: 0 15px;
         }
-        .title {
-            color: #004d99;
-            font-weight: bold;
-            font-size: 28px;
-            margin: 20px 0;
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
         }
-        .subtitle {
-            color: #333333;
-            font-size: 20px;
-            margin-bottom: 20px;
+
+        main {
+            padding: 2rem 0;
         }
-        .box {
-            background-color: #e6f2ff;
-            margin: 10px auto;
-            padding: 15px;
-            width: 80%;
-            cursor: pointer;
-            border: 1px solid #004d99;
-            border-radius: 10px;
-            transition: background-color 0.3s, box-shadow 0.3s;
+
+        .course-info {
+            background-color: #fff;
+            border-radius: 5px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
-        .box:hover {
-            background-color: #cce0ff;
-            box-shadow: 0 0 10px rgba(0, 77, 153, 0.5);
+
+        .course-info h2 {
+            color: #003366;
+            margin-bottom: 1rem;
         }
-        .footer {
-            margin-top: 20px;
-            padding: 20px;
-            background-color: #004d99;
-            color: white;
-            text-align: right;
+
+        .modules {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+
+        .module {
+            background-color: #fff;
+            border-radius: 5px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .module h3 {
+            color: #004080;
+            margin-bottom: 0.5rem;
+        }
+
+        footer {
+            background-color: #003366;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul li {
+                margin: 5px 0;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="header">
-        <img src="MOELogo.svg" alt="SVG Image">
-        <div>وزارة التعليم</div>
-    </div>
+    <script>
+        if (localStorage.getItem('isLoggedIn') !== 'true') {
+            window.location.href = 'login.html';
+        }
+    </script>
+    <header>
+        <div class="container">
+            <h1>وزارة التعليم - مقرر فيزياء 3-1</h1>
+        </div>
+    </header>
 
-    <div class="title">خاص بالطلاب المحترمين</div>
-    <div class="subtitle">مقرر فيزياء 3-1</div>
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#course-info">نظرة عامة</a></li>
+                <li><a href="#modules">الوحدات الدراسية</a></li>
+                <li><a href="#resources">المصادر</a></li>
+                <li><a href="#contact">اتصل بنا</a></li>
+            </ul>
+        </div>
+    </nav>
 
-    <div class="box" onclick="location.href='#';">إرشادات خاصة بالبحث العلمي</div>
-    <div class="box" onclick="location.href='#';">إرشادات عامة</div>
-    <div class="box" onclick="location.href='#';">إرشادات خاصة</div>
+    <main class="container">
+        <section id="course-info" class="course-info">
+            <h2>نظرة عامة على المقرر</h2>
+            <p>مرحبًا بكم في مقرر فيزياء 3-1. يهدف هذا المقرر إلى تعميق فهمكم للمفاهيم الأساسية في الفيزياء، مع التركيز على الميكانيكا الكلاسيكية والديناميكا الحرارية. من خلال هذا المقرر، ستطورون مهاراتكم في التفكير النقدي وحل المشكلات.</p>
+        </section>
 
-    <div class="footer">
-        البريد الإلكتروني: t9100008@rb.moe.gov.sa
-    </div>
+        <section id="modules" class="modules">
+            <div class="module">
+                <h3>الوحدة 1: أساسيات الميكانيكا</h3>
+                <p>مراجعة قوانين نيوتن، الحركة في بعدين، الشغل والطاقة.</p>
+            </div>
+            <div class="module">
+                <h3>الوحدة 2: الديناميكا الدورانية</h3>
+                <p>عزم الدوران، الحركة الدورانية، الزخم الزاوي.</p>
+            </div>
+            <div class="module">
+                <h3>الوحدة 3: الجاذبية</h3>
+                <p>قانون الجذب العام، حركة الكواكب والأقمار الصناعية.</p>
+            </div>
+            <div class="module">
+                <h3>الوحدة 4: الديناميكا الحرارية</h3>
+                <p>الحرارة والطاقة الحرارية، قوانين الديناميكا الحرارية.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>للتواصل: t9100008@rb.moe.gov.sa</p>
+        </div>
+    </footer>
 </body>
 </html>
