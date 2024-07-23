@@ -5,49 +5,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>صفحة خاصة بالطلاب المحترمين</title>
     <style>
+        @font-face {
+            font-family: 'KFGQPCKSARegular-Regular';
+            src: url('KFGQPCKSARegular-Regular.ttf') format('truetype');
+        }
         body {
             font-family: 'KFGQPCKSARegular-Regular', sans-serif;
-            background-color: #ffffff;
+            background-color: #f9f9f9;
             direction: rtl;
             text-align: center;
+            margin: 0;
+            padding: 0;
         }
         .header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px;
+            background-color: #004d99;
+            color: white;
+            padding: 10px 20px;
         }
         .header img {
             width: 50px;
         }
         .title {
-            color: red;
+            color: #004d99;
             font-weight: bold;
-            font-size: 24px;
-            margin-top: 20px;
+            font-size: 28px;
+            margin: 20px 0;
         }
         .subtitle {
-            color: black;
+            color: #333333;
             font-size: 20px;
-            margin-top: 10px;
+            margin-bottom: 20px;
         }
         .box {
-            background-color: #add8e6;
-            margin: 20px auto;
+            background-color: #e6f2ff;
+            margin: 10px auto;
             padding: 15px;
             width: 80%;
             cursor: pointer;
+            border: 1px solid #004d99;
+            border-radius: 10px;
+            transition: background-color 0.3s, box-shadow 0.3s;
+        }
+        .box:hover {
+            background-color: #cce0ff;
+            box-shadow: 0 0 10px rgba(0, 77, 153, 0.5);
         }
         .footer {
             margin-top: 20px;
-            text-align: right;
             padding: 20px;
+            background-color: #004d99;
+            color: white;
+            text-align: right;
         }
     </style>
 </head>
 <body>
     <div class="header">
         <img src="moesvg.svg" alt="SVG Image">
+        <div>وزارة التعليم</div>
     </div>
 
     <div class="title">خاص بالطلاب المحترمين</div>
@@ -58,7 +76,7 @@
     <div class="box" onclick="location.href='#';">إرشادات خاصة</div>
 
     <div class="footer">
-        البريد الإلكتروني : t9100008@rb.moe.gov.sa
+        البريد الإلكتروني: t9100008@rb.moe.gov.sa
     </div>
 </body>
 </html>
