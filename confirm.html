@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تأكيد الحساب</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .confirm-container {
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .confirm-container h2 {
+            color: #003366;
+            margin-bottom: 1rem;
+        }
+
+        .confirm-container button {
+            padding: 0.5rem 2rem;
+            background-color: #004080;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .confirm-container button:hover {
+            background-color: #003366;
+        }
+    </style>
+</head>
+<body>
+    <div class="confirm-container">
+        <h2>تأكيد الحساب</h2>
+        <p>تم تأكيد بريدك الإلكتروني بنجاح.</p>
+        <button onclick="confirmAccount()">الدخول إلى الصفحة الرئيسية</button>
+    </div>
+
+    <script>
+        function confirmAccount() {
+            localStorage.setItem('isConfirmed', 'true');
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+</html>
