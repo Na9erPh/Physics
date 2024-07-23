@@ -20,9 +20,6 @@
         .header img {
             width: 50px;
         }
-        .header .date {
-            text-align: right;
-        }
         .title {
             color: red;
             font-weight: bold;
@@ -51,9 +48,6 @@
 <body>
     <div class="header">
         <img src="path/to/your/image.svg" alt="SVG Image">
-        <div class="date" id="date">
-            <!-- سيتم تحديث التاريخ هنا -->
-        </div>
     </div>
 
     <div class="title">خاص بالطلاب المحترمين</div>
@@ -66,34 +60,5 @@
     <div class="footer">
         البريد الإلكتروني : t9100008@rb.moe.gov.sa
     </div>
-
-    <!-- تضمين مكتبة axios عبر CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script>
-        // دالة لتحديث التاريخ
-        async function updateDate() {
-            const dateElement = document.getElementById('date');
-            const today = new Date();
-            const gregorian = today.toLocaleDateString('ar-SA', { year: 'numeric', month: 'long', day: 'numeric' });
-
-            try {
-                // طلب التاريخ الهجري من API
-                const response = await axios.get('https://api.aladhan.com/v1/gToH', {
-                    params: {
-                        date: `${today.getDate()}-${today.getMonth() + 1}-${today.getFullYear()}`
-                    }
-                });
-                const hijriDate = response.data.data.hijri.date;
-
-                dateElement.innerHTML = `التاريخ الهجري: ${hijriDate}<br>التاريخ الميلادي: ${gregorian}`;
-            } catch (error) {
-                console.error('Error fetching Hijri date:', error);
-                dateElement.innerHTML = `التاريخ الميلادي: ${gregorian}`;
-            }
-        }
-
-        // استدعاء الدالة لتحديث التاريخ عند تحميل الصفحة
-        window.onload = updateDate;
-    </script>
 </body>
 </html>
