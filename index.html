@@ -1,164 +1,94 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>مقرر فيزياء 3-1</title>
+    <title>السيرة الذاتية</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
-
-        * {
+        body {
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Cairo', sans-serif;
-            line-height: 1.6;
-            color: #333;
             background-color: #f4f4f4;
+            color: #333;
         }
-
         .container {
-            max-width: 1100px;
+            max-width: 800px;
             margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        header {
-            background-color: #003366;
-            color: #fff;
-            padding: 1rem 0;
-        }
-
-        header h1 {
-            font-size: 1.5rem;
-        }
-
-        nav {
-            background-color: #004080;
-            padding: 0.5rem 0;
-        }
-
-        nav ul {
-            list-style-type: none;
-            display: flex;
-            justify-content: center;
-        }
-
-        nav ul li {
-            margin: 0 15px;
-        }
-
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
-        }
-
-        main {
-            padding: 2rem 0;
-        }
-
-        .course-info {
             background-color: #fff;
-            border-radius: 5px;
-            padding: 2rem;
-            margin-bottom: 2rem;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-
-        .course-info h2 {
-            color: #003366;
-            margin-bottom: 1rem;
-        }
-
-        .modules {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1rem;
-        }
-
-        .module {
-            background-color: #fff;
-            border-radius: 5px;
-            padding: 1.5rem;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-
-        .module h3 {
-            color: #004080;
-            margin-bottom: 0.5rem;
-        }
-
-        footer {
-            background-color: #003366;
-            color: #fff;
+        h1 {
             text-align: center;
-            padding: 1rem 0;
-            margin-top: 2rem;
+            color: #4CAF50;
         }
-
-        @media (max-width: 768px) {
-            nav ul {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            nav ul li {
-                margin: 5px 0;
-            }
+        h2 {
+            color: #4CAF50;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        ul li {
+            background: #e7f3e7;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
         }
     </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>ناصر المطيري - مقرر فيزياء 3-1</h1>
-        </div>
-    </header>
 
-    <nav>
-        <div class="container">
+    <div class="container">
+        <h1>السيرة الذاتية</h1>
+
+        <div class="section">
+            <h2>البيانات الشخصية</h2>
             <ul>
-                <li><a href="#course-info">نظرة عامة</a></li>
-                <li><a href="#modules">الوحدات الدراسية</a></li>
-                <li><a href="#resources">المصادر</a></li>
-                <li><a href="#contact">اتصل بنا</a></li>
+                <li>الاسم: ناصر</li>
+                <li>العنوان: المملكة العربية السعودية</li>
+                <li>رقم الهاتف: 1234567890</li>
+                <li>البريد الإلكتروني: example@example.com</li>
             </ul>
         </div>
-    </nav>
 
-    <main class="container">
-        <section id="course-info" class="course-info">
-            <h2>نظرة عامة على المقرر</h2>
-            <p>مرحبًا بكم في مقرر فيزياء 3-1. يهدف هذا المقرر إلى تعميق فهمكم للمفاهيم الأساسية في الفيزياء، مع التركيز على الميكانيكا الكلاسيكية والديناميكا الحرارية. من خلال هذا المقرر، ستطورون مهاراتكم في التفكير النقدي وحل المشكلات.</p>
-        </section>
-
-        <section id="modules" class="modules">
-            <div class="module">
-                <h3>الوحدة 1: أساسيات الميكانيكا</h3>
-                <p>مراجعة قوانين نيوتن، الحركة في بعدين، الشغل والطاقة.</p>
-            </div>
-            <div class="module">
-                <h3>الوحدة 2: الديناميكا الدورانية</h3>
-                <p>عزم الدوران، الحركة الدورانية، الزخم الزاوي.</p>
-            </div>
-            <div class="module">
-                <h3>الوحدة 3: الجاذبية</h3>
-                <p>قانون الجذب العام، حركة الكواكب والأقمار الصناعية.</p>
-            </div>
-            <div class="module">
-                <h3>الوحدة 4: الديناميكا الحرارية</h3>
-                <p>الحرارة والطاقة الحرارية، قوانين الديناميكا الحرارية.</p>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <p>للتواصل: t9100008@rb.moe.gov.sa</p>
+        <div class="section">
+            <h2>التعليم</h2>
+            <ul>
+                <li>بكالوريوس في الفيزياء - جامعة الملك سعود - 2020</li>
+                <li>ماجستير في تعليم الفيزياء - جامعة الإمام - 2024</li>
+            </ul>
         </div>
-    </footer>
+
+        <div class="section">
+            <h2>الخبرات العملية</h2>
+            <ul>
+                <li>مدرس فيزياء في مدرسة ثانوية - 5 سنوات</li>
+                <li>منسق برامج الطلاب الموهوبين - 3 سنوات</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>المهارات</h2>
+            <ul>
+                <li>البرمجة بلغة Python</li>
+                <li>إدارة المشاريع التعليمية</li>
+                <li>استخدام LaTeX</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>الإنجازات</h2>
+            <ul>
+                <li>تطوير برنامج لتعليم البرمجة للطلاب</li>
+                <li>تأليف كتاب في البرهان الرياضي للقوانين الفيزيائية</li>
+            </ul>
+        </div>
+    </div>
+
 </body>
 </html>
